@@ -1,20 +1,19 @@
 using Soenneker.Shopify.GraphQlClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Shopify.GraphQlClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class ShopifyGraphQlClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class ShopifyGraphQlClientUtilTests : HostedUnitTest
 {
     private readonly IShopifyGraphQlClientUtil _graphqlclientutil;
 
-    public ShopifyGraphQlClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public ShopifyGraphQlClientUtilTests(Host host) : base(host)
     {
         _graphqlclientutil = Resolve<IShopifyGraphQlClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
