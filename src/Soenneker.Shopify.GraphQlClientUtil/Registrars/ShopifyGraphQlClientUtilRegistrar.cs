@@ -6,12 +6,12 @@ using Soenneker.Shopify.HttpClients.Registrars;
 namespace Soenneker.Shopify.GraphQlClientUtil.Registrars;
 
 /// <summary>
-/// A .NET thread-safe singleton GraphQL client
+/// Registers the lazily initialized Shopify Admin GraphQL client.
 /// </summary>
 public static class ShopifyGraphQlClientUtilRegistrar
 {
     /// <summary>
-    /// Adds <see cref="ShopifyGraphQlClientUtil"/> as a singleton service. <para/>
+    /// Adds the Shopify Admin GraphQL client utility as a singleton service. <para/>
     /// </summary>
     public static IServiceCollection AddShopifyGraphQlClientUtilAsSingleton(this IServiceCollection services)
     {
@@ -22,7 +22,7 @@ public static class ShopifyGraphQlClientUtilRegistrar
     }
 
     /// <summary>
-    /// Adds <see cref="ShopifyGraphQlClientUtil"/> as a scoped service. <para/>
+    /// Adds the Shopify Admin GraphQL client utility as a scoped service backed by the singleton HTTP client provider. <para/>
     /// </summary>
     public static IServiceCollection AddShopifyGraphQlClientUtilAsScoped(this IServiceCollection services)
     {
