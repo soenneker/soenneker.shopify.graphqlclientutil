@@ -9,6 +9,7 @@ using Soenneker.Shopify.HttpClients.Abstract;
 
 namespace Soenneker.Shopify.GraphQlClientUtil;
 
+/// <inheritdoc cref="IShopifyGraphQlClientUtil" />
 public sealed class ShopifyGraphQlClientUtil : IShopifyGraphQlClientUtil
 {
     private readonly AsyncSingleton<ShopifyGraphQlClient> _client;
