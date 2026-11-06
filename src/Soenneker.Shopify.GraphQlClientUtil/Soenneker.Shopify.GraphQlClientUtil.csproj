@@ -45,6 +45,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Shopify.HttpClients" Version="11.0.168" />
-        <PackageReference Include="Soenneker.Shopify.GraphQlClient" Version="11.0.135" />
+        <PackageReference Include="Soenneker.Shopify.GraphQlClient" Version="11.0.136" />
     </ItemGroup>
 </Project>
